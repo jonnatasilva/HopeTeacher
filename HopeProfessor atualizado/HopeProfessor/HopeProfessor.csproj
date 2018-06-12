@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8BACC49E-11BC-453D-A2B4-CBD6CC1DC73F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HopeProfessor</RootNamespace>
+    <AssemblyName>HopeProfessor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CriandoRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CriandoRelatorio.Designer.cs">
+      <DependentUpon>CriandoRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DAO_aluno.cs" />
+    <Compile Include="DAO\DAO_professor.cs" />
+    <Compile Include="DAO\DAO_relatorio.cs" />
+    <Compile Include="ExibeRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\Dbs1.cs" />
+    <Compile Include="Hope.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hope.Designer.cs">
+      <DependentUpon>Hope.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DadosProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DadosProfessor.Designer.cs">
+      <DependentUpon>DadosProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuProf.Designer.cs">
+      <DependentUpon>MenuProf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DadosAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DadosAluno.Designer.cs">
+      <DependentUpon>DadosAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeuPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeuPerfil.Designer.cs">
+      <DependentUpon>MeuPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio.Designer.cs">
+      <DependentUpon>Relatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Esqueci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Esqueci.Designer.cs">
+      <DependentUpon>Esqueci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfilAluno.Designer.cs">
+      <DependentUpon>PerfilAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VO\VO_aluno.cs" />
+    <Compile Include="VO\VO_Professor.cs" />
+    <Compile Include="VO\VO_relatorio.cs" />
+    <EmbeddedResource Include="CriandoRelatorio.resx">
+      <DependentUpon>CriandoRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExibeRelatorio.resx">
+      <DependentUpon>ExibeRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hope.resx">
+      <DependentUpon>Hope.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DadosProfessor.resx">
+      <DependentUpon>DadosProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuProf.resx">
+      <DependentUpon>MenuProf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DadosAluno.resx">
+      <DependentUpon>DadosAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeuPerfil.resx">
+      <DependentUpon>MeuPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio.resx">
+      <DependentUpon>Relatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Esqueci.resx">
+      <DependentUpon>Esqueci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerfilAluno.resx">
+      <DependentUpon>PerfilAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuProfessor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuProfessor.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuProfessor1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dados professor %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person-Male-Light-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files-New-File-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go-back-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
